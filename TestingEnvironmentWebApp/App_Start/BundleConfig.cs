@@ -23,9 +23,9 @@ namespace TestingEnvironmentWebApp
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/Style/css").Include(
+                      "~/Content/Style/bootstrap.css",
+                      "~/Content/Style/site.css"));
         }
     }
 }
