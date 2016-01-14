@@ -1665,7 +1665,7 @@ input[type="search"] {
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
+  margin: 15px;
   margin-top: 1px \9;
   /* IE8-9 */
 
@@ -1778,7 +1778,10 @@ textarea.form-control {
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  float: left;
+  /*  Was in default bootstrap.css   
+
+      float: left;  
+  */
   margin-left: -20px;
 }
 
@@ -4501,7 +4504,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #ffffff;
   border-color: #080808;
 }
 
