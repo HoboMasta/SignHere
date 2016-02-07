@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace TestingEnvironmentWebApp.Models
+namespace SignHere.Models
 {
     public class IndexViewModel
     {

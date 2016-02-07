@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using TestingEnvironmentWebApp.Models;
+using SignHere.Models;
 
-namespace TestingEnvironmentWebApp
+namespace SignHere
 {
     public partial class Startup
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(TestingEnvironmentWebApp.Startup))]
-namespace TestingEnvironmentWebApp
+[assembly: OwinStartupAttribute(typeof(SignHere.Startup))]
+namespace SignHere
 {
     public partial class Startup
     {

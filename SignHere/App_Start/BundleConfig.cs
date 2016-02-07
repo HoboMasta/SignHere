@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace TestingEnvironmentWebApp
+namespace SignHere
 {
     public class BundleConfig
     {
