@@ -11,11 +11,40 @@
 
                 <h1>LOG IN</h1>
                 <p class="lead">Are you a Notary or a Client?</p>
-                <input id="Notary" class="form-control" type="radio" />   <span>Notary</span>  
-                <input id="Client" class="form-control" type="radio" />  <span>Client</span> 
+
+                <div class="btn-group" data-toggle="buttons">
+                    <a class="btn btn-default active" data-toggle="tab">
+                        <input type="radio" id="notary" checked="checked" name="loginType">Notary
+                    </a>
+                    <a class="btn btn-default" data-toggle="tab">
+                        <input type="radio" id="client" name="loginType">Client
+                    </a>                   
+                </div>
+
+                <script>
+                    function signinClick() {
+
+                        if ($input.prop('type') == 'radio')
+                        {
+                            alert($input.prop('checked'));
+
+                        }
+
+                        if ($('#notary').prop("checked", true)) {
+                            alert("notary clicked");
+                        }
+                        else if ($('#client').prop("checked", true)) {
+                            alert("client clicked");
+                        }
+
+                    }
+
+
+                </script>
+
                 <input id="loginEmail" class="form-control" type="email" autofocus="" required="" placeholder="Email Address" />
                 <input id="loginPassword" class="form-control" type="password" required="" placeholder="Password" />
-                <button id ="BtnSignIn" type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                <button id ="BtnSignIn" type="submit" class="btn btn-lg btn-primary btn-block" onclick="signinClick()">Sign in</button>
 
             </form>
 
