@@ -31,3 +31,17 @@ textarea {
     padding: 20px;
 
 }
+
+
+.form-NewOrder {
+    display: inline-block;
+    margin: 0;
+    max-width: 400px;
+    padding: 20px;
+
+}
+
+.form-row{
+    margin-bottom:20px;
+
+}

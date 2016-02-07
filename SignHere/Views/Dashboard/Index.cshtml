@@ -1,0 +1,307 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+<div class="row">
+    <div class="col-md-10">
+
+
+
+        <div class="row">
+            <div class="col-md-3" style="margin-top: 40px;">
+
+
+                <a onclick="ClickNewOrder()"  class="btn btn-info">New Order</a>
+            </div>
+            <div class="col-md-9" style="margin-top: 40px;">
+
+                <form method="get" id="filter-form" class="filter-form" action="/orders" accept-charset="UTF-8">
+                    <div style="margin:0;padding:0;"><input type="hidden" value="✓" name="utf8"></div>
+
+                    <div class="search-row filter-control-row" style="display:inline-block;">
+                        <select style="display:inline-block;" name="q[c][0][a][0][name]" id="q_c_0_a_0_name" class="filter-attribute-name form-control">
+                            <option value="lastname">Last Name</option>
+                            <option value="firstname">First Name</option>
+                            <option value="city">City</option>
+                            <option value="state">State</option>
+                            <option value="client_company_name">Client</option>
+                            <option value="owner_full_name">Order Owner</option>
+                            <option value="order_number">Order #</option>
+                            <option value="escrow_number">File #</option>
+                            <option value="notary_last_name">Notary Last Name</option>
+                            <option value="status">Status</option>
+                            <option value="lender">Lender</option>
+                            <option value="appointment_date">Appointment Date</option>
+                        </select>
+                        <input style="display:inline-block;" type="text" size="30" name="q[c][0][v][0][value]" id="q_c_0_v_0_value" class="filter-attribute-value form-control">
+                        <input style="display:inline-block;" type="submit" value="Search" name="commit" data-disable-with="Search" class="btn btn-default search-btn">
+                    </div>
+                    <input type="hidden" name="index_view" id="index_view">
+                </form>
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 50px;">
+
+                <div class="panel panel-default panel-orders">
+                    <div class="table-responsive any-screen">
+
+                        <table class="table table-hover orders-table" data-provides="rowlink">
+                            <thead>
+                                <tr class="orders-table__header-row">
+                                    <th>OrderID</th>
+                                    <th>Signers</th>
+                                    <th>Appointment</th>
+                                    <th>Client</th>
+                                    <th>Notary</th>
+                                    <th>Documents</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="order_305898" data-inactive="false" class="orders-table__order rowlink">
+                                    <td class="orders-table__order__col orders-table__order__col--num">
+                                        <div class="hidden">10194</div>
+                                        <a class="rowlink" href="/orders/305898">10194</a>
+                                        <div class="text-muted">
+                                            0500481551
+                                        </div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--signer">
+                                        Piawlock
+                                        <div class="text-muted">Bryant Pond , ME</div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--appt">
+                                        2/2 at T.B.D.
+                                        <div class="text-muted">Passed</div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--client">
+                                        DocSolution, Inc. (by Charles A. Brown &amp; Associates, P.L.L.C.)
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--notary"></td>
+                                    <td class="orders-table__order__col orders-table__order__col--docs">
+                                        <div rel="tooltip" data-original-title="Documents have not been sent to the notary." class="docs docs-not-sent">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--status">
+                                        <div class="orders-table__order__col--status__content">
+                                            <div class="viewing-users"></div>
+                                            <span rel="tooltip" data-toggle="tooltip" data-title="Owned by Tracy  Andersen" data-placement="top" class="order-avatar-container" data-original-title="" title="">
+                                                <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                            </span>
+                                            <span></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="order_302613" data-inactive="false" class="orders-table__order rowlink">
+                                    <td class="orders-table__order__col orders-table__order__col--num">
+                                        <div class="hidden">10156</div>
+                                        <a class="rowlink" href="/orders/302613">10156</a>
+                                        <div class="text-muted">
+                                            501800768
+                                        </div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--signer">
+                                        Kingston
+                                        <div class="text-muted">Abington, MA</div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--appt">
+                                        1/25 at T.B.D.
+                                        <div class="text-muted">Passed</div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--client">
+                                        DocSolution, Inc. (by Charles A. Brown &amp; Associates, P.L.L.C.)
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--notary">
+                                        Keny Petit-Frere
+
+                                        <span class="notary-phone"><i rel="tooltip" data-original-title="mobile" class="fa fa-phone fa-fw"></i> <a class="display-phone-number" href="tel:(617) 771-0792">(617) 771-0792</a><span class="display-phone-number">(617) 771-0792</span></span>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--docs">
+                                        <div rel="tooltip" data-original-title="Notary Downloaded Docs" class="docs docs-downloaded">
+                                            1
+                                        </div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--status">
+                                        <div class="orders-table__order__col--status__content">
+                                            <div class="viewing-users"></div>
+                                            <span rel="tooltip" data-toggle="tooltip" data-title="Owned by Mireya  Rodriguez" data-placement="top" class="order-avatar-container" data-original-title="" title="">
+                                                <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                            </span>
+                                            <span>Did not sign</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr id="order_302522" data-inactive="false" class="orders-table__order rowlink">
+                                    <td class="orders-table__order__col orders-table__order__col--num">
+                                        <div class="hidden">10148</div>
+                                        <a class="rowlink" href="/orders/302522">10148</a>
+                                        <div class="text-muted">
+                                            0500095112
+                                        </div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--signer">
+                                        Solomon
+                                        <div class="text-muted">Cincinnati, OH</div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--appt">
+                                        1/25 at T.B.D.
+                                        <div class="text-muted">Passed</div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--client">
+                                        DocSolution, Inc. (by Charles A. Brown &amp; Associates, P.L.L.C.)
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--notary">
+                                        satar Baghbanian
+
+                                        <span class="notary-phone"><i rel="tooltip" data-original-title="mobile" class="fa fa-phone fa-fw"></i> <a class="display-phone-number" href="tel:(513) 470-3946">(513) 470-3946</a><span class="display-phone-number">(513) 470-3946</span></span>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--docs">
+                                        <div rel="tooltip" data-original-title="Notary Downloaded Docs" class="docs docs-downloaded">
+                                            10
+                                        </div>
+                                    </td>
+                                    <td class="orders-table__order__col orders-table__order__col--status">
+                                        <div class="orders-table__order__col--status__content">
+                                            <div class="viewing-users"></div>
+                                            <span rel="tooltip" data-toggle="tooltip" data-title="Owned by Mireya  Rodriguez" data-placement="top" class="order-avatar-container" data-original-title="" title="">
+                                                <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                            </span>
+                                            <span>Did not sign</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="col-md-2" style="margin-top: 40px;">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Notifications</h3>
+            </div>
+            <table data-provides="rowlink" class="table table-bordered table-hover activity-feed-table">
+                <tbody id="activity-feed-list">
+                    <tr class="rowlink">
+                        <td>
+                            <div class="activity-wrapper">
+                                <div class="activity-feed-item-title">
+                                    NOTTAGE
+                                    <div class="pull-right">
+                                        <i class="fa fa-comment text-muted"></i>
+                                    </div>
+                                </div>
+                                <div class="activity-feed-item-content">
+                                    Still waiting on Fex Ex Label, won...
+                                </div>
+                                <div class="activity-feed-item-info">
+                                    <div class="pull-right">
+                                        <div class="text-muted">
+                                            02/06  8:18am
+                                        </div>
+                                    </div>
+                                    <div class="text-muted">
+                                        by Ben Duhon
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="rowlink">
+                        <td>
+                            <div class="activity-wrapper">
+                                <div class="activity-feed-item-title">
+                                    NOTTAGE
+                                    <div class="pull-right">
+                                        <i class="fa fa-comment text-muted"></i>
+                                    </div>
+                                </div>
+                                <div class="activity-feed-item-content">
+                                    I will provide a fed ex label shor...
+                                </div>
+                                <div class="activity-feed-item-info">
+                                    <div class="pull-right">
+                                        <div class="text-muted">
+                                            02/05  2:55pm
+                                        </div>
+                                    </div>
+                                    <div class="text-muted">
+                                        by Mireya  Rodriguez
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="rowlink">
+                        <td>
+                            <div class="activity-wrapper">
+                                <div class="activity-feed-item-title">
+                                    NOTTAGE
+                                    <div class="pull-right">
+                                        <i class="fa fa-comment text-muted"></i>
+                                    </div>
+                                </div>
+                                <div class="activity-feed-item-content">
+                                    I will provide a fed ex label shor...
+                                </div>
+                                <div class="activity-feed-item-info">
+                                    <div class="pull-right">
+                                        <div class="text-muted">
+                                            02/05  2:55pm
+                                        </div>
+                                    </div>
+                                    <div class="text-muted">
+                                        by Mireya  Rodriguez
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<script>
+
+    function ClickNewOrder() {
+
+        location.href = '@Url.Action("NewOrder", "Orders")'
+
+    };
+
+
+
+
+
+</script>
