@@ -50,5 +50,41 @@
 </div>
 
 
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("GetAllReviewTypes", "HR")',
+            dataType: 'json',
+            success: function (result) {
+                for (i = 0; i < result.ReviewTypes.NameX.length; i++) {
+                    var tBody = document.getElementById('reviewTableBody');
+                    var ReviewRow = document.createElement('tr');
 
+                    var NameTD = document.createElement('td');
+                    var DescXTD = document.createElement('td');
+                    var PeriodTD = document.createElement('td');
+
+                    NameTD.innerHTML = result.ReviewTypes.NameX[i];
+                    DescXTD.innerHTML = result.ReviewTypes.ReviewType[i];
+                    PeriodTD.innerHTML = result.ReviewTypes.DescX[i];
+
+                    tBody.appendChild(ReviewRow);
+
+                    ReviewRow.appendChild(NameTD);
+                    ReviewRow.appendChild(DescXTD);
+                    ReviewRow.appendChild(PeriodTD);
+                }
+            },
+            error: function () { alert('Error:  Not Found.'); }
+        });
+
+
+
+
+
+
+
+    });   
+</script>
 
