@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "NewOrder";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="text-center">
+            
+
+     
+            <form class="form-NewOrder" method="post" id="new_order" autocomplete="off" action="/orders" accept-charset="UTF-8" novalidate="novalidate">
+
+                <div class="row form-row">
+                    <div class="col-md-12">
+
+                        <h1>New Order</h1>
+
+                    </div>
+               </div>
+
+               <div class="row form-row">
+                   <div class="col-md-12">
+
+                       <input id="OrderAddress" class="form-control" type="text" required="required" placeholder="Street address" name="order[street_address]" aria-required="true">
+
+                   </div>
+               </div>
+
+               <div class="row form-row">
+
+                   <div class="col-md-6">
+
+                       <input id="OrderCity" class="form-control" type="text" required="required" placeholder="City" name="order[city]" aria-required="true">
+
+                   </div>
+                   <div class="col-md-6">
+
+                       <input id="OrderZip" class="form-control" type="text" required="required" placeholder="ZIP" name="order[zip]" maxlength="5" aria-required="true">
+
+                   </div>
+
+               </div>
+
+                <div class="row form-row">
+
+                    <div class="col-md-12">
+
+                        <select id="OrderClientSelect" class="form-control" required="required">
+                            <option value="client1">client1</option>
+                            <option value="client2">client2</option>
+                            <option value="client3">client3</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                
+
+
+
+            </form>
+          
+        </div>
+    </div>
+
+</div>
+
