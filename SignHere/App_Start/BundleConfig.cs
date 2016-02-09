@@ -25,7 +25,8 @@ namespace SignHere
 
             bundles.Add(new StyleBundle("~/Content/Style/css").Include(
                       "~/Content/Style/bootstrap.css",
-                      "~/Content/Style/site.css"));
+                      "~/Content/Style/site.css",
+                      "~/Content/Style/font-awesome.css"));
         }
     }
 }
