@@ -1,403 +1,109 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-5  toppad  pull-right col-md-offset-3 "> 
+            
+        </div>
 
-<h2>This will be a sample notary profile</h2>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
 
-<!doctype html>
-<html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html">
-    <title>User Profile with Content Tabs - Design Shack Demo</title>
-    <meta name="author" content="Jake Rocheleau">
-    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
-    <link rel="icon" href="http://designshack.net/favicon.ico">
-    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-</head>
+            <marquee behavior="scroll" bgcolor="white" loop="-1" width="100%">
+                <i>
+                    <font color="blue">
+                        Today's date is :                        
+                            <span id="time"></span>                       
+                    </font>
+                </i>
+            </marquee>
 
+            <script>
+                var today = new Date();
+                document.getElementById('time').innerHTML = today;
+            </script>
 
-<body>
-    <style>
-        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html { overflow-y: scroll; }
-body { 
-  background: #f0f0f0; 
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #313131;
-  font-size: 62.5%; 
-  line-height: 1; 
-}
+            <div class="panel panel-info">
+                <div class="panel-heading" style="height:50px;">
 
-::selection { background: #a4dcec; }
-::-moz-selection { background: #a4dcec; }
-::-webkit-selection { background: #a4dcec; }
+                    <h3 class="panel-title">Test Notary
+                        <button type="button" class="btn btn-info" onclick="ClickEditProfile()" style="float: right;">Edit Profile</button>
+                    </h3>
+                    
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
 
-::-webkit-input-placeholder { /* WebKit browsers */
-  color: #ccc;
-  font-style: italic;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #ccc;
-  font-style: italic;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #ccc;
-  font-style: italic;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color: #ccc !important;
-  font-style: italic;  
-}
+                     
+                        <div class=" col-md-9 col-lg-9 ">
 
-br { display: block; line-height: 2.2em; } 
+                            <a href="#" class="btn btn-primary">My Past Signings</a>
+                            <a href="#" class="btn btn-primary">My Pending Orders</a>
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-ol, ul { list-style: none; }
+                            
 
-input, textarea { 
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none; 
-}
+                            <table class="table table-user-information" style="margin-top: 25px;">
+                                <tbody>
+                                    <tr>
+                                        <td>Specialty:</td>
+                                        <td>Real Estate Transactions and Annuity Contracts</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Active Notary Since:</td>
+                                        <td>06/23/2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date of Birth</td>
+                                        <td>01/24/1982</td>
+                                    </tr>                                   
+                                    <tr>
+                                        <td>Home Address</td>
+                                        <td>4503 Elwood Road Austin, TX 78722</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email</td>
+                                        <td><a href="mailto:info@notary.com">info@notary.com</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number</td>                               
+                                        <td>123-4567-890(Mobile)<br><br>555-4567-890(Fax)</td>
+                                    </tr>
 
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-strong { font-weight: bold; } 
+                                    <tr>
+                                        <td>Bio</td>
+                                        <td>I'm a notary for the state of Texas for more than 10 years and have completed annuity contract signing, other acknowledgement signing and specializing in real estate transactions.
+                                            I cover the metropolitan area surrounding and including Austin, such as, but not limited to, Buda, Kyle, San Marcos, Dripping Springs, Hutto, Taylor, Elgin, Manor, Pflugerville, Round Rock, Georgetown, Cedar Park, and Leander.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-table { border-collapse: collapse; border-spacing: 0; }
-img { border: 0; max-width: 100%; }
+                            <iframe frameborder="0" scrolling="no" marginheight="0"
+                                    marginwidth="0" width="300" height="300"
+                                    src="https://maps.google.com/maps?hl=en&q=4503 Elwood Rd Austin, TX 78722&ie=UTF8&t=m&z=10&iwloc=B&output=embed">
 
-#topbar {
-  background: #4f4a41;
-  padding: 10px 0 10px 0;
-  text-align: center;
-  height: 36px;
-  overflow: hidden;
-  -webkit-transition: height 0.5s linear;
-  -moz-transition: height 0.5s linear;
-  transition: height 0.5s linear;
-}
-#topbar a {
-  color: #fff;
-  font-size:1.3em;
-  line-height: 1.25em;
-  text-decoration: none;
-  opacity: 0.5;
-  font-weight: bold;
-}
-#topbar a:hover {
-  opacity: 1;
-}
+                            </iframe>
 
-/** typography **/
-h1 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 2.5em;
-  line-height: 1.5em;
-  letter-spacing: -0.05em;
-  margin-bottom: 20px;
-  padding: .1em 0;
-  color: #444;
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-	text-align: center;
-}
-h1:before,
-h1:after {
-  content: "";
-  position: relative;
-  display: inline-block;
-  width: 50%;
-  height: 1px;
-  vertical-align: middle;
-  background: #f0f0f0;
-}
-h1:before {    
-  left: -.5em;
-  margin: 0 0 0 -50%;
-}
-h1:after {    
-  left: .5em;
-  margin: 0 -50% 0 0;
-}
-h1 > span {
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
-}
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a data-original-title="email data-toggle=" tooltip" type="button" href="#" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+                    <a data-original-title="linkedin data-toggle=" tooltip" type="button" href="#" class="btn btn-sm btn-primary"><i class="fa fa-linkedin"></i></a>
+                    <a data-original-title="facebook data-toggle=" tooltip" type="button" href="#" class="btn btn-sm btn-primary"><i class="fa fa-facebook"></i></a>
 
+                </div>
 
-h2 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 2.1em;
-  line-height: 1.4em;
-  letter-spacing: normal;
-  margin-bottom: 20px;
-  padding: .1em 0;
-  color: #444;
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-	text-align: center;
-}
+            </div>
+        </div>
+    </div>
+</div>
 
-p {
-  display: block;
-  font-size: 1.4em;
-  line-height: 1.55em;
-  margin-bottom: 22px;
-  color: #555;
-}
+<script>   
 
-a { color: #5a9352; text-decoration: none; }
-a:hover { text-decoration: underline; }
+    function ClickEditProfile() {
 
-.center { display: block; text-align: center; }
+        location.href = '@Url.Action("EditProfile", "Notary")'
 
-/** page structure **/
-#w {
-  display: block;
-  width: 750px;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 45px;
-}
+    };
 
-#content {
-  display: block;
-  width: 100%;
-  background: #fff;
-  padding: 25px 20px;
-  padding-bottom: 35px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-}
-
-#userphoto {
-  display: block;
-  float: right;
-  margin-left: 10px;
-  margin-bottom: 8px;
-}
-#userphoto img {
-  display: block;
-  padding: 2px;
-  background: #fff;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-}
-
-
-/** profile nav links **/
-#profiletabs {
-  display: block;
-  margin-bottom: 4px;
-  height: 50px;
-}
-
-#profiletabs ul { list-style: none; display: block; width: 70%; height: 50px; }
-#profiletabls ul li { float: left; }
-#profiletabs ul li a { 
-  display: block;
-  float: left;
-  padding: 8px 11px;
-  font-size: 1.2em;
-  font-weight: bold;
-  background: #eae8db;
-  color: #666;
-  margin-right: 7px;
-  border: 1px solid #fff;
-  -webkit-border-radius: 5px;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-radius: 5px;
-  -moz-border-radius-bottomleft: 0;
-  border-radius: 5px;
-  border-bottom-left-radius: 0;
-}
-#profiletabs ul li a:hover {
-  text-decoration: none;
-  background: #dad7c2;
-  color: #565656;
-}
-
-#profiletabs ul li a.sel {
-  background: #fff;
-  border-color: #d1cdb5;
-}
-
-
-/** profile content sections **/
-.hidden {
-  display: none;
-}
-
-.activity {
-  border-bottom: 1px solid #d6d1af;
-  padding-bottom: 4px;
-}
-
-.setting {
-  display: block;
-  font-weight: normal;
-  padding: 7px 3px;
-  border-top: 1px solid #d6d1af;
-  margin-bottom: 5px;
-}
-.setting span {
-  float: left; 
-  width: 250px;
-  font-weight: bold;
-}
-.setting span img { 
-  cursor: pointer;
-}
-
-
-#friendslist {
-  display: block;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-#friendslist li { line-height: 30px; }
-#friendslist li a {
-  float: left;
-  height: 30px;
-  padding: 3px 6px;
-  line-height: 22px;
-   margin-right: 15px;
-  border: 1px solid #c9d8b8;
-}
-
-#friendslist li a img { float: left; margin-right: 5px; }
-
-/** clearfix **/
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; }
- 
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
-
-
-    </style>
-
-
-
-    <div id="w">
-        <div id="content" class="clearfix">
-            <div id="userphoto"><img src="http://gonetworth.com/wp-content/uploads/2013/03/bob-saget-net-worth2.jpg" alt="default avatar"></div>
-            <h1>Notary Profile for <b>Mr. Test Notary</b></h1>
-
-            <nav id="profiletabs">
-                <ul class="clearfix">
-                    <li><a onclick="clickTab()" href="#info" class="sel">Info</a></li>
-                    <li><a onclick="clickTab()" href="#credentials">Credentials</a></li>
-                    <li><a onclick="clickTab()" href="#comments">Comments and Reviews</a></li>
-                    <li><a onclick="clickTab()" href="#signings">Signings</a></li>
-                </ul>
-            </nav>
-
-            <section id="info">
-                <h2>Notary Information</h2>
-                <br />
-                <h4>Basic Info</h4>
-                <p>I'm a notary for the state of Texas for more than 10 years and have completed annuity contract signing, other acknowledgement signing exclude real estate transactions.
-I cover the metropolitan area surrounding and including Austin, such as, but not limited to, Buda, Kyle, San Marcos, Dripping Springs, Hutto, Taylor, Elgin, Manor, Pflugerville, Round Rock, Georgetown, Cedar Park, and Leander.</p>
-                <h4>Shipping and Payment Address</h4>
-                <p>4503 Elwood Road
-                Austin, TX 78722</p>
-                <h4>Contact Info</h4>
-                <p>P: 512-555-1234 - 
-                F: 512-555-1235</p>
-
-                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="400" height="440" 
-                        src="https://maps.google.com/maps?hl=en&q=4503 Elwood Road AUstin TX 78722&ie=UTF8&t=m&z=11&iwloc=B&output=embed">
-                    <a href="http://embedgooglemaps.com">embed google map</a><a href="https://googlemapsgenerator.com">embed google maps</a>
-                </iframe>
-                
-            </section>
-
-            <section id="credentials" class="hidden">
-                <p>Most recent actions:</p>
-
-                <p class="activity">10:15PM - Submitted a news article</p>
-
-                <p class="activity">9:50PM - Submitted a news article</p>
-
-                <p class="activity">8:15PM - Posted a comment</p>
-
-                <p class="activity">4:30PM - Added <strong>someusername</strong> as a friend</p>
-
-                <p class="activity">12:30PM - Submitted a news article</p>
-            </section>
-
-            <section id="comments" class="hidden">
-                <p>Friends list:</p>
-
-                <ul id="friendslist" class="clearfix">
-                    <li><a href="#"><img src="images/avatar.png" width="22" height="22"> Username</a></li>
-                    <li><a href="#"><img src="images/avatar.png" width="22" height="22"> SomeGuy123</a></li>
-                    <li><a href="#"><img src="images/avatar.png" width="22" height="22"> PurpleGiraffe</a></li>
-                </ul>
-            </section>
-
-            <section id="signings" class="hidden">
-                <p>Edit your user settings:</p>
-
-                <p class="setting"><span>E-mail Address <img src="images/edit.png" alt="*Edit*"></span> lolno@gmail.com</p>
-
-                <p class="setting"><span>Language <img src="images/edit.png" alt="*Edit*"></span> English(US)</p>
-
-                <p class="setting"><span>Profile Status <img src="images/edit.png" alt="*Edit*"></span> Public</p>
-
-                <p class="setting"><span>Update Frequency <img src="images/edit.png" alt="*Edit*"></span> Weekly</p>
-
-                <p class="setting"><span>Connected Accounts <img src="images/edit.png" alt="*Edit*"></span> None</p>
-            </section>
-        </div><!-- end #content -->
-    </div><!-- end #w -->
-    <script type="text/javascript">
-        function clickTab() {
-            alert("above");
-            $('#profiletabs > a').on('click', function (e) {
-                alert("asdf");
-                e.preventDefault();
-                var newcontent = $(this).attr('href');
-
-                $('#profiletabs ul li a').removeClass('sel');
-                $(this).addClass('sel');
-
-                $('#content section ul li a').each(function () {
-                    if (!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
-                });
-
-                $(newcontent).removeClass('hidden');
-            });
-        };
-    </script>
-</body>
-</html>
-
+</script>

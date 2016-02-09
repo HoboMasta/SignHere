@@ -13,5 +13,13 @@ namespace SignHere.Controllers
         {
             return View();
         }
+
+        public ActionResult EditProfile()
+        {
+            return View();
+        }
+
+
+
     }
 }

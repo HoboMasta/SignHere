@@ -3,5 +3,131 @@
     ViewBag.Title = "EditProfile";
 }
 
-<h2>EditProfile</h2>
+<div class="row">
+
+    <div class="col-md-12">
+
+        <div class="text-center">
+
+            <div class="row form-row">
+                <div class="col-md-12">
+
+                    <h1>Edit Your Profile</h1>
+
+                </div>
+            </div>
+
+            <form class="form-EditProfile" method="post" id="new_profile" autocomplete="off" action="/orders" accept-charset="UTF-8" novalidate="novalidate">
+
+                <div class="col-md-6">
+                   
+                    <div class="row form-row">
+                        <div class="col-md-12">
+
+                            <input id="address" class="form-control" type="text" required="required" placeholder="Street address" name="profile[street_address]" aria-required="true">
+                            <input id="address2" class="form-control" type="text" required="required" placeholder="Street address line 2" name="profile[street_address2]" aria-required="true">
+
+                        </div>
+                    </div>
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+
+                            <input id="city" class="form-control" type="text" required="required" placeholder="City"
+                                   name="profile[city]" aria-required="true" size="50">
+                            <input id="state" class="form-control" type="text" required="required" placeholder="State"
+                                   name="profile[state]" aria-required="true">
+                            <input id="zip" class="form-control" type="text" required="required" placeholder="Zip"
+                                   name="profile[zip]" maxlength="5" aria-required="true" size="20">
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+
+                            <input id="phone" class="form-control" type="text" required="required" placeholder="Phone #"
+                                   name="profile[phone]" aria-required="true" />
+                            <input id="fax" class="form-control" type="text" required="required" placeholder="Fax #"
+                                   name="profile[Fax]" aria-required="true" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+
+                            <label>Active Since Date:</label>
+                            <input id="activeDate" class="form-control" type="date" required="required" placeholder="Active Since Date"
+                                   name="profile[activeDate]" aria-required="true" />
+                            <label>Date of Birth:</label>
+                            <input id="dob" class="form-control" type="date" required="required" placeholder="Date of Birth"
+                                   name="profile[dob]" aria-required="true" />
+                        </div>
+
+                    </div>
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+                            <input id="email" class="form-control" type="text" required="required" placeholder="Email Address"
+                                   name="profile[email]" aria-required="true" />
+                        </div>
+
+                    </div>
+
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+                            <input id="specialty" class="form-control" type="text" required="required" placeholder="Specialty"
+                                   name="profile[specialty]" aria-required="true" />
+                        </div>
+
+                    </div>
+
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+                            <textarea id="bio" class="form-control" type="text" required="required" placeholder="Edit Bio"
+                                   name="profile[bio]" aria-required="true" style="height:100px;">
+                            </textarea>
+                        </div>
+
+                       
+
+                    </div>
+
+                    <div class="row form-row">
+
+                        <div class="col-md-6">
+                            <label>Choose Profile Photo</label>
+                            <input type="file" name="pic" accept="image/*" placeholder="Choose Profile Photo">
+                        </div>
+
+                    </div>
+
+
+
+
+                    </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
 
