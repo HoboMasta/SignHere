@@ -9,13 +9,105 @@
 
 </head>
 <body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">              
+                <a class="navbar-brand" href="~/Dashboard/Index">Sign Here</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">               
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin<strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/notaries">Notaries</a></li>
+                        <li><a href="/clients">Clients</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/accounting/spreadsheets/new">Accounting Tools</a></li>
+                        <li><a href="/emails">Emails Report</a></li>
+                        <li><a href="/analytics">Analytics</a></li>
+                        <li><a href="/company/settings/edit">Company Settings</a></li>
+                        <li><a href="/proximity_search">Proximity Search</a></li>
+                        <li class="divider"></li>
+                        <li><a href="http://support.snapdocs.com/">Help</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                        My Account
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="/profile/edit">My Account</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <!--
+
     <div class="container" style="border-bottom: solid 1px black;">
         <div class="row">
-                <a href="@Url.Action("Index", "Home")">
-                    <img src="~/Content/Resources/Images/SignHereLogo.png" />
-                </a>
+            <div class="col-md-6">
+           
+                    <div id="logoImg"></div>
+             
+            </div>
+
+            <div class="col-md-6">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/orders">Dashboard</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            Admin
+                            <strong class="caret"></strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/notaries">Notaries</a></li>
+                            <li><a href="/clients">Clients</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/accounting/spreadsheets/new">Accounting Tools</a></li>
+                            <li><a href="/emails">Emails Report</a></li>
+                            <li><a href="/analytics">Analytics</a></li>
+                            <li><a href="/company/settings/edit">Company Settings</a></li>
+                            <li><a href="/proximity_search">Proximity Search</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://support.snapdocs.com/">Help</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                            Christopher  Britton
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="/profile/edit">My Account</a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a rel="nofollow" data-method="delete" href="/users/sign_out">Sign out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+
         </div>
     </div>
+
+        -->
 
     <div class="container body-content">
         @RenderBody()
