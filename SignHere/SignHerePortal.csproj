@@ -268,10 +268,13 @@
     <Content Include="Views\Client\Clients.cshtml" />
     <Content Include="Views\Client\ProximitySearch.cshtml" />
     <Content Include="Views\Analytics\Index.cshtml" />
+    <Content Include="Views\Reports\Index.cshtml" />
+    <Content Include="Views\Reports\Accounting.cshtml" />
+    <Content Include="Views\Reports\EmailLog.cshtml" />
+    <Content Include="Views\Admin\Account.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Reports\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
