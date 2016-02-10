@@ -272,6 +272,7 @@
     <Content Include="Views\Reports\Accounting.cshtml" />
     <Content Include="Views\Reports\EmailLog.cshtml" />
     <Content Include="Views\Admin\Account.cshtml" />
+    <Content Include="Views\Orders\OrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
