@@ -11,10 +11,7 @@
     </div>
     <div class="form-group">
         <div class="input-group">
-            <input class="form-control" id="proximity_search_distance" name="proximity_search[distance]" size="30" style="max-width: 75px;" type="text" value="10">
-            <span class="input-group-addon">
-                miles
-            </span>
+            <input class="form-control" id="proximity_search_distance" name="proximity_search[distance]" size="70" style="max-width: 75px;" type="text" placeholder="miles">
         </div>
     </div>
     <input id="cached_address" name="cached_address" type="hidden">
@@ -22,5 +19,26 @@
     <input id="proximity_search_longitude" name="proximity_search[longitude]" type="hidden">
     <input class="btn btn-primary" data-disable-with="Search" id="proximity-search-submit" name="commit" type="submit" value="Search">
 </form>
+
+<div>
+   <h3>Notaries</h3>
+    <table class="table table-hover orders-table" data-provides="rowlink">
+        <thead>
+            <tr class="orders-table__header-row">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Verified</th>
+                <th>Feedback</th>
+                <th>Orders</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+
+    </table>
+
+</div>
+
 
 

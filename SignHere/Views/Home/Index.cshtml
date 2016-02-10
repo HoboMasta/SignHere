@@ -11,11 +11,11 @@
 
                 <h1>LOG IN</h1>
                 <p class="lead">Are you a Notary or a Client?</p>
-                <div id="tab" class="btn-group" data-toggle="buttons">
-                    <a href="#prices" class="btn btn-default active" data-toggle="tab">
+                <div id="tab" class="btn-group" data-toggle="buttons"style="margin-bottom:20px;">
+                    <a href="#prices" id="notary" class="btn btn-default active" data-toggle="tab">
                         <input type="radio">Notary
                     </a>
-                    <a href="#features" class="btn btn-default" data-toggle="tab">
+                    <a href="#features" id="client" class="btn btn-default" data-toggle="tab">
                         <input type="radio">Client
                     </a>
                     
@@ -23,7 +23,7 @@
 
                 <input id="loginEmail" class="form-control" type="email" autofocus="" required="" placeholder="Email Address" />
                 <input id="loginPassword" class="form-control" type="password" required="" placeholder="Password" />
-                <button id="BtnSignIn" onclick="ClickSignIn()" type="button" class="btn btn-lg btn-primary btn-block"></button>
+                <button id="BtnSignIn" onclick="ClickSignIn()" type="button" class="btn btn-lg btn-primary btn-block">Sign In</button>
 
 </form>
 
@@ -54,7 +54,19 @@
 
     function ClickSignIn() {
 
-        location.href = '@Url.Action("Index", "Dashboard")'
+
+        if (document.getElementById("notary").checked === true)
+        {
+            alert("notary true");
+
+        }
+        else if (document.getElementById("client").checked === true)
+        {
+            alert("lkjlkj")
+
+        }
+
+       // location.href = '@Url.Action("Index", "Dashboard")'
 
     };
 
