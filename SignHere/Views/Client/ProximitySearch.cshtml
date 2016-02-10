@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "ProximitySearch";
+}
+
+<h2>Proximity Search</h2>
+
+<form accept-charset="UTF-8" action="/proximity_search" class="form-inline" id="new_proximity_search" method="get">
+    <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div><div class="form-group">
+        <input class="form-control" id="proximity_search_address" name="proximity_search[address]" placeholder="Address, city and state, or zip code" size="30" type="text">
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <input class="form-control" id="proximity_search_distance" name="proximity_search[distance]" size="30" style="max-width: 75px;" type="text" value="10">
+            <span class="input-group-addon">
+                miles
+            </span>
+        </div>
+    </div>
+    <input id="cached_address" name="cached_address" type="hidden">
+    <input id="proximity_search_latitude" name="proximity_search[latitude]" type="hidden">
+    <input id="proximity_search_longitude" name="proximity_search[longitude]" type="hidden">
+    <input class="btn btn-primary" data-disable-with="Search" id="proximity-search-submit" name="commit" type="submit" value="Search">
+</form>
+
+

@@ -1,0 +1,414 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Analytics</h2>
+
+
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-10">
+        <div class="loading-overlay" style="display: none;">
+            <i class="fa fa-spinner fa-spin fa-large"></i>
+        </div>
+        <div class="page-header analytics-header">
+            <div class="pull-left">
+                <h1 class="pull-left">Analytics</h1>
+                <div class="dropdown dropdown-period pull-left" data-selected="current_month">
+                    <button aria-expanded="" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdown_periods" type="button">
+                        <span class="selected_text">Current <strong class="text-muted" style="margin-left: 10px;">Feb '16</strong></span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul aria-labelledby="dropdown_periods" class="dropdown-menu" role="menu">
+                        <li role="presentation">
+                            <a href="/analytics/overview/current_month" data-period="current_month">Current <strong class="text-muted" style="margin-left: 10px;">Feb '16</strong></a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/analytics/overview/previous_month" data-period="previous_month">Last Month <strong class="text-muted" style="margin-left: 10px;">Jan '16</strong></a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/analytics/overview/6months" data-period="6months">Last 6 Months <strong class="text-muted" style="margin-left: 10px;">Aug - Jan '16</strong></a>
+                        </li>
+                        <li role="presentation">
+                            <a href="/analytics/overview/12months" data-period="12months">Last 12 Months <strong class="text-muted" style="margin-left: 10px;">Feb - Jan '16</strong></a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" data-period="range">Pick a date range</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-left">
+                    <form accept-charset="UTF-8" action="/analytics/overview/range" class="date-range-selectors form-inline" method="get" style="display: none;">
+                        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="date_range_from_name">Start</span>
+                            <input aria-describedby="date_range_from_name" class="form-control datepicker date_range_from hasDatepicker" id="from" name="from" type="text">
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="date_range_to_name">End</span>
+                            <input aria-describedby="date_range_to_name" class="form-control datepicker date_range_to hasDatepicker" id="to" name="to" type="text">
+                        </div>
+                        <input class="btn btn-primary" name="commit" type="submit" value="Apply">
+                    </form>
+
+                </div>
+            </div>
+            <div class="pull-right">
+                <ul class="nav nav-pills">
+                    <li class="active" role="presentation">
+                        <a href="/analytics/overview/current_month">Overview</a>
+                    </li>
+                    <li class="" role="presentation">
+                        <a href="/analytics/clients/current_month">Clients</a>
+                    </li>
+                    <li class="" role="presentation">
+                        <a href="/analytics/team/current_month">Team</a>
+                    </li>
+                    <li class="" role="presentation">
+                        <a href="/analytics/observers/current_month">Observers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="panel panel-default panel-statistics">
+                    <div class="row media-row">
+                        <div class="block-title">
+                            Month to date stats
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <div class="row">
+                                <div class="col-xs-6" style="border-right: 1px solid #CCC;">
+                                    <div class="stat-block stat-block-lg">
+                                        <div class="stat-block-value">$1,905</div>
+                                        <div class="stat-block-title">Total Revenue</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="stat-block stat-block-lg">
+                                        <div class="stat-block-value">16</div>
+                                        <div class="stat-block-title">Signings Scheduled</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row media-row">
+                        <div class="col-xs-4">
+                            <div class="stat-block">
+                                <div class="stat-block-value positive">$119.06</div>
+                                <div class="stat-block-title">Avg Client Fee</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="stat-block">
+                                <div class="stat-block-value neutral">$70.38</div>
+                                <div class="stat-block-title">Avg Notary Fee</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="stat-block">
+                                <div class="stat-block-value">$48.69</div>
+                                <div class="stat-block-title">Avg Margin</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row media-row">
+                        <div class="row-same-height">
+                            <div class="col-xs-4 col-xs-height">
+                                <div class="stat-block">
+                                    <div class="stat-block-value">3</div>
+                                    <div class="stat-block-title">Active Clients</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-xs-height">
+                                <div class="stat-block">
+                                    <div class="stat-block-value">0</div>
+                                    <div class="stat-block-title">Client Users</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-xs-height col-middle text-center">
+                                <div class="link-with-chevron"><a href="/analytics/clients/current_month">Client<br>Analytics</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row media-row">
+                        <div class="block-title">
+                            Avg Fill Time
+                        </div>
+                        <div class="row-same-height" style="margin-top: 10px;">
+                            <div class="col-xs-8 col-xs-height col-middle text-large">
+                                <strong>about 3 hours</strong>
+                                average from order entry to notary assigned
+                            </div>
+                            <div class="col-xs-4 col-xs-height col-middle text-center">
+                                <div class="link-with-chevron"><a href="/analytics/team/current_month">Team<br>Analytics</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row media-row">
+                        <div class="clearfix">
+                            <div class="col-xs-12 text-large">
+                                You worked with 17 notaries
+                                in 9 states
+                                and 15 different cities.
+                            </div>
+                        </div>
+                        <div class="clearfix" style="margin-top: 15px;">
+                            <div class="col-xs-4">
+                                <div class="stat-block">
+                                    <div class="stat-block-value">51</div>
+                                    <div class="stat-block-title">Files Transferred</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="stat-block">
+                                    <div class="stat-block-value">448</div>
+                                    <div class="stat-block-title">Emails Sent</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="stat-block">
+                                    <div class="stat-block-value">593</div>
+                                    <div class="stat-block-title">Comments Added</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row media-row">
+                        <div class="col-xs-9">
+                            <div class="block-title">
+                                Orders Created Today
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="stat-block">
+                                <div class="stat-block-value text-right">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-7">
+                <div class="panel panel-default panel-daily-activity">
+                    <div class="row media-row">
+                        <div class="block-title">
+                            Daily Activity for February
+                        </div>
+                        <div class="row">
+                            <div data-daily-activity="{&quot;client_fees_points&quot;:[[1454284800000,&quot;955.0&quot;],[1454371200000,0],[1454457600000,&quot;295.0&quot;],[1454544000000,&quot;140.0&quot;],[1454630400000,&quot;525.0&quot;],[1454716800000,0],[1454803200000,&quot;65.0&quot;],[1454889600000,&quot;150.0&quot;],[1454976000000,&quot;175.0&quot;],[1455062400000,0],[1455148800000,0],[1455235200000,0],[1455321600000,0],[1455408000000,0],[1455494400000,0],[1455580800000,0],[1455667200000,0],[1455753600000,0],[1455840000000,0],[1455926400000,0],[1456012800000,0],[1456099200000,0],[1456185600000,0],[1456272000000,0],[1456358400000,0],[1456444800000,0],[1456531200000,0],[1456617600000,0],[1456704000000,0]],&quot;notary_fees_points&quot;:[[1454284800000,&quot;545.0&quot;],[1454371200000,0],[1454457600000,&quot;156.0&quot;],[1454544000000,&quot;80.0&quot;],[1454630400000,&quot;345.0&quot;],[1454716800000,0],[1454803200000,&quot;40.0&quot;],[1454889600000,&quot;100.0&quot;],[1454976000000,&quot;125.0&quot;],[1455062400000,0],[1455148800000,0],[1455235200000,0],[1455321600000,0],[1455408000000,0],[1455494400000,0],[1455580800000,0],[1455667200000,0],[1455753600000,0],[1455840000000,0],[1455926400000,0],[1456012800000,0],[1456099200000,0],[1456185600000,0],[1456272000000,0],[1456358400000,0],[1456444800000,0],[1456531200000,0],[1456617600000,0],[1456704000000,0]],&quot;orders_count_points&quot;:[[1454284800000,8],[1454371200000,0],[1454457600000,3],[1454544000000,2],[1454630400000,3],[1454716800000,0],[1454803200000,1],[1454889600000,1],[1454976000000,1],[1455062400000,0],[1455148800000,0],[1455235200000,0],[1455321600000,0],[1455408000000,0],[1455494400000,0],[1455580800000,0],[1455667200000,0],[1455753600000,0],[1455840000000,0],[1455926400000,0],[1456012800000,0],[1456099200000,0],[1456185600000,0],[1456272000000,0],[1456358400000,0],[1456444800000,0],[1456531200000,0],[1456617600000,0],[1456704000000,0]],&quot;details&quot;:{&quot;1454284800000&quot;:{&quot;client_fees&quot;:955.0,&quot;notary_fees&quot;:545.0,&quot;profit&quot;:410.0,&quot;orders_count&quot;:8,&quot;printed_client_fees&quot;:&quot;$955&quot;,&quot;printed_notary_fees&quot;:&quot;$545&quot;,&quot;printed_profit&quot;:&quot;$410&quot;,&quot;printed_orders_count&quot;:&quot;8&quot;,&quot;printed_orders_count_text&quot;:&quot;8 Orders&quot;,&quot;printed_date&quot;:&quot;February 1, 2016&quot;},&quot;1454371200000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 2, 2016&quot;},&quot;1454457600000&quot;:{&quot;client_fees&quot;:295.0,&quot;notary_fees&quot;:156.0,&quot;profit&quot;:139.0,&quot;orders_count&quot;:3,&quot;printed_client_fees&quot;:&quot;$295&quot;,&quot;printed_notary_fees&quot;:&quot;$156&quot;,&quot;printed_profit&quot;:&quot;$139&quot;,&quot;printed_orders_count&quot;:&quot;3&quot;,&quot;printed_orders_count_text&quot;:&quot;3 Orders&quot;,&quot;printed_date&quot;:&quot;February 3, 2016&quot;},&quot;1454544000000&quot;:{&quot;client_fees&quot;:140.0,&quot;notary_fees&quot;:80.0,&quot;profit&quot;:60.0,&quot;orders_count&quot;:2,&quot;printed_client_fees&quot;:&quot;$140&quot;,&quot;printed_notary_fees&quot;:&quot;$80&quot;,&quot;printed_profit&quot;:&quot;$60&quot;,&quot;printed_orders_count&quot;:&quot;2&quot;,&quot;printed_orders_count_text&quot;:&quot;2 Orders&quot;,&quot;printed_date&quot;:&quot;February 4, 2016&quot;},&quot;1454630400000&quot;:{&quot;client_fees&quot;:525.0,&quot;notary_fees&quot;:345.0,&quot;profit&quot;:180.0,&quot;orders_count&quot;:3,&quot;printed_client_fees&quot;:&quot;$525&quot;,&quot;printed_notary_fees&quot;:&quot;$345&quot;,&quot;printed_profit&quot;:&quot;$180&quot;,&quot;printed_orders_count&quot;:&quot;3&quot;,&quot;printed_orders_count_text&quot;:&quot;3 Orders&quot;,&quot;printed_date&quot;:&quot;February 5, 2016&quot;},&quot;1454716800000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 6, 2016&quot;},&quot;1454803200000&quot;:{&quot;client_fees&quot;:65.0,&quot;notary_fees&quot;:40.0,&quot;profit&quot;:25.0,&quot;orders_count&quot;:1,&quot;printed_client_fees&quot;:&quot;$65&quot;,&quot;printed_notary_fees&quot;:&quot;$40&quot;,&quot;printed_profit&quot;:&quot;$25&quot;,&quot;printed_orders_count&quot;:&quot;1&quot;,&quot;printed_orders_count_text&quot;:&quot;1 Order&quot;,&quot;printed_date&quot;:&quot;February 7, 2016&quot;},&quot;1454889600000&quot;:{&quot;client_fees&quot;:150.0,&quot;notary_fees&quot;:100.0,&quot;profit&quot;:50.0,&quot;orders_count&quot;:1,&quot;printed_client_fees&quot;:&quot;$150&quot;,&quot;printed_notary_fees&quot;:&quot;$100&quot;,&quot;printed_profit&quot;:&quot;$50&quot;,&quot;printed_orders_count&quot;:&quot;1&quot;,&quot;printed_orders_count_text&quot;:&quot;1 Order&quot;,&quot;printed_date&quot;:&quot;February 8, 2016&quot;},&quot;1454976000000&quot;:{&quot;client_fees&quot;:175.0,&quot;notary_fees&quot;:125.0,&quot;profit&quot;:50.0,&quot;orders_count&quot;:1,&quot;printed_client_fees&quot;:&quot;$175&quot;,&quot;printed_notary_fees&quot;:&quot;$125&quot;,&quot;printed_profit&quot;:&quot;$50&quot;,&quot;printed_orders_count&quot;:&quot;1&quot;,&quot;printed_orders_count_text&quot;:&quot;1 Order&quot;,&quot;printed_date&quot;:&quot;February 9, 2016&quot;},&quot;1455062400000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 10, 2016&quot;},&quot;1455148800000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 11, 2016&quot;},&quot;1455235200000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 12, 2016&quot;},&quot;1455321600000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 13, 2016&quot;},&quot;1455408000000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 14, 2016&quot;},&quot;1455494400000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 15, 2016&quot;},&quot;1455580800000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 16, 2016&quot;},&quot;1455667200000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 17, 2016&quot;},&quot;1455753600000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 18, 2016&quot;},&quot;1455840000000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 19, 2016&quot;},&quot;1455926400000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 20, 2016&quot;},&quot;1456012800000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 21, 2016&quot;},&quot;1456099200000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 22, 2016&quot;},&quot;1456185600000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 23, 2016&quot;},&quot;1456272000000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 24, 2016&quot;},&quot;1456358400000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 25, 2016&quot;},&quot;1456444800000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 26, 2016&quot;},&quot;1456531200000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 27, 2016&quot;},&quot;1456617600000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 28, 2016&quot;},&quot;1456704000000&quot;:{&quot;client_fees&quot;:0.0,&quot;notary_fees&quot;:0.0,&quot;profit&quot;:0.0,&quot;orders_count&quot;:0,&quot;printed_client_fees&quot;:&quot;$0&quot;,&quot;printed_notary_fees&quot;:&quot;$0&quot;,&quot;printed_profit&quot;:&quot;$0&quot;,&quot;printed_orders_count&quot;:&quot;0&quot;,&quot;printed_orders_count_text&quot;:&quot;0 Orders&quot;,&quot;printed_date&quot;:&quot;February 29, 2016&quot;}},&quot;tick_size&quot;:[5,&quot;day&quot;],&quot;time_format&quot;:&quot;%e&quot;}" data-period="current_month" data-title-company="false" id="daily_activity_chart" style="height: 250px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 421px; height: 250px;" width="421" height="250"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 226px; left: 29px; text-align: center;"> 1</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 226px; left: 162px; text-align: center;">11</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 226px; left: 230px; text-align: center;">16</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 226px; left: 298px; text-align: center;">21</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 226px; left: 366px; text-align: center;">26</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 88px; top: 226px; left: 97px; text-align: center;"> 6</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 210px; left: 21px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 168px; left: 8px; text-align: right;">200</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 126px; left: 8px; text-align: right;">400</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 84px; left: 8px; text-align: right;">600</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 42px; left: 8px; text-align: right;">800</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 0px; left: 2px; text-align: right;">1000</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 421px; height: 250px;" width="421" height="250"></canvas></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="stat-block">
+                                    <span class="stat-label client-fees">Client Fees</span>
+                                    <span class="value info client_fees"></span>
+                                    <span class="info running_total">
+                                        $1,905
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="stat-block">
+                                    <span class="stat-label notary-fees">Notary Fees</span>
+                                    <span class="value info notary_fees"></span>
+                                    <span class="info running_total">
+                                        $1,126
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="stat-block">
+                                    <span class="stat-label">Orders</span>
+                                    <span class="value orders_count"></span>
+                                    <span class="info running_total">
+                                        261
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="stat-block">
+                                    <span class="stat-label">Profit</span>
+                                    <span class="value profit negative"></span>
+                                    <span class="info running_total">
+                                        $779
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default panel-order-completions">
+                    <div class="row media-row">
+                        <div class="block-title">
+                            Order Completions
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 center">
+                                <div class="circle" data-value="0.9333333333333333" id="orders_successful">
+                                    <canvas width="150" height="150"></canvas>
+                                    <div class="percentage">93%</div>
+                                    <div class="title">successful</div>
+                                    <div class="title-sub">14 orders</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 center">
+                                <div class="circle" data-value="0.0" id="orders_did_not_sign">
+                                    <canvas width="150" height="150"></canvas>
+                                    <div class="percentage">0%</div>
+                                    <div class="title">did not sign</div>
+                                    <div class="title-sub">0 orders</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 center">
+                                <div class="circle" data-value="0.06666666666666667" id="orders_canceled">
+                                    <canvas width="150" height="150"></canvas>
+                                    <div class="percentage">7%</div>
+                                    <div class="title">canceled, on hold</div>
+                                    <div class="title-sub">1 order</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default panel-with-table panel-orders-by-state">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Orders by state</th>
+                                    <th class="center"># of orders</th>
+                                    <th class="center">Avg client fee</th>
+                                    <th class="center">Avg notary fee</th>
+                                    <th class="center">Avg margin</th>
+                                    <th class="center">
+                                        NET
+                                        <br>
+                                        % of total
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Texas</td>
+                                    <td class="center">8</td>
+                                    <td class="center">$79</td>
+                                    <td class="center">$45</td>
+                                    <td class="center">$34</td>
+                                    <td class="center">
+                                        $274
+                                        <br>
+                                        35.2%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Missouri</td>
+                                    <td class="center">2</td>
+                                    <td class="center">$150</td>
+                                    <td class="center">$88</td>
+                                    <td class="center">$63</td>
+                                    <td class="center">
+                                        $125
+                                        <br>
+                                        16.0%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>New York</td>
+                                    <td class="center">2</td>
+                                    <td class="center">$150</td>
+                                    <td class="center">$75</td>
+                                    <td class="center">$75</td>
+                                    <td class="center">
+                                        $150
+                                        <br>
+                                        19.3%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Massachusetts</td>
+                                    <td class="center">1</td>
+                                    <td class="center">$150</td>
+                                    <td class="center">$100</td>
+                                    <td class="center">$50</td>
+                                    <td class="center">
+                                        $50
+                                        <br>
+                                        6.4%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Virginia</td>
+                                    <td class="center">1</td>
+                                    <td class="center">$150</td>
+                                    <td class="center">$75</td>
+                                    <td class="center">$75</td>
+                                    <td class="center">
+                                        $75
+                                        <br>
+                                        9.6%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>North Carolina</td>
+                                    <td class="center">1</td>
+                                    <td class="center">$150</td>
+                                    <td class="center">$95</td>
+                                    <td class="center">$55</td>
+                                    <td class="center">
+                                        $55
+                                        <br>
+                                        7.1%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Colorado</td>
+                                    <td class="center">1</td>
+                                    <td class="center">$225</td>
+                                    <td class="center">$175</td>
+                                    <td class="center">$50</td>
+                                    <td class="center">
+                                        $50
+                                        <br>
+                                        6.4%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel panel-default panel-statistics">
+                    <div class="row media-row">
+                        <div class="col-xs-4">
+                            <div class="stat-block">
+                                <div class="stat-block-value">$779</div>
+                                <div class="stat-block-title">Total Net Profit</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="stat-block">
+                                <div class="stat-block-value">$1,905</div>
+                                <div class="stat-block-title">Total Client Fees</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="stat-block">
+                                <div class="stat-block-value">$1,126</div>
+                                <div class="stat-block-title">Total Notary Fees</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
