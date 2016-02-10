@@ -1,0 +1,963 @@
+﻿
+@{
+    ViewBag.Title = "OrderDetail";
+}
+
+<div class="container-fluid primary-container-admin">
+    <!-- -->
+    <span class="glyphicon glyphicon-circle-arrow-right navigation-arrow navigation-arrow-right hidden-softly"></span>
+    <span class="glyphicon glyphicon-circle-arrow-left navigation-arrow navigation-arrow-left hidden-softly"></span>
+    <div data-order-id="302946" class="row order-header admin-order-header">
+        <div class="col-sm-12">
+            <div class="order-title-container">
+                <h1>
+                    Perpignan
+                    <small>
+                        Order #10181
+                    </small>
+                </h1>
+                <div class="order-appointment-confirmation-status">
+                </div>
+                <div class="order-time">
+                    <h4>
+                        <i class="glyphicon glyphicon-time"></i>
+                        Wed 01/20/16 at 1:00 pm
+                        <span class="time-remaining">
+                            HST - Passed
+                        </span>
+                    </h4>
+                </div>
+                <div class="order-place">
+                    <h4>
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                        <a class="show_google_map" href="#">Mililani, HI 96789</a>
+                    </h4>
+                </div>
+            </div>
+            <a class="btn btn-default edit-order-btn" href="/orders/302946/edit">
+                <i class="glyphicon glyphicon-pencil"></i>
+                Edit Order
+            </a>
+        </div>
+    </div>
+    <div class="row admin-order-content">
+        <div class="col-sm-3 sidebar order-sidebar">
+            <div class="order-sidebar__content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="workflow-buttons admin-workflow-buttons">
+                            <div class="btn-group btn-group-main btn-group-lg workflow-notary-search">
+                                <a role="button" data-remote="true" data-disable-with="Please wait..." class="btn btn-primary btn-workflow" href="/orders/302946/notaries">Search Agents</a>
+                            </div>
+                            <div class="btn-group btn-group-main btn-group-lg workflow-notary-confirmation">
+                                <button type="submit" title="" rel="tooltip" name="button" data-container="body" class="btn btn-workflow disabled" data-original-title="You'll need to assign a notary to this order before you can send confirmations.">Send notary confirmation</button>
+                            </div>
+                            <div class="btn-group btn-group-main btn-group-with-dropdown btn-group-lg workflow-docs-to-notary">
+                                <button type="submit" title="" rel="tooltip" name="button" data-container="body" class="btn btn-workflow disabled" data-original-title="You'll need to assign a notary to this order before you can send documents.">Send docs to notary</button>
+                                <div class="btn-group btn-group-dropdown btn-group-lg">
+                                    <button class="btn dropdown-toggle disabled">
+                                        <span class="caret"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="btn-group btn-group-main btn-group-lg workflow-add-signing-status">
+                                <button type="submit" name="button" class="btn btn-workflow disabled">Add signing status</button>
+                            </div>
+                            <div class="btn-group btn-group-main btn-group-with-dropdown btn-group-lg workflow-close-order">
+                                <div style=""><button disabled="disabled" class="btn btn-warning btn-workflow"><i class="fa fa-exclamation-circle icon-white"></i> Order canceled</button></div>
+                                <div class="btn-group btn-group-dropdown btn-group-lg workflow-close-order">
+                                    <button data-toggle="dropdown" class="btn dropdown-toggle btn-warning">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right workflow-close-order">
+                                        <li><a rel="nofollow" data-remote="true" data-method="put" data-disable-with="Please wait..." href="/orders/302946/completion_status?order_action=reactivate">Reactivate order</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel-body order-status-panel">
+                            <form method="post" id="edit_order_302946" data-remote="true" class="form-horizontal order-status" action="/orders/302946" accept-charset="UTF-8" novalidate="novalidate">
+                                <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="put" name="_method"><input type="hidden" value="g8CoWHDJOCiJ7qNJ/6lUv5GtgGgwAdhVL0zXSW0yoQA=" name="authenticity_token"></div><div class="form-group order-owner-block">
+                                    <label class="control-label col-xs-2">Owner</label>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-9">
+                                        <div class="select2-container form-control input-sm" id="s2id_owner"><a tabindex="-1" class="select2-choice" onclick="return false;" href="javascript:void(0)">   <span><label class="initial-badge">MR</label>Mireya  Rodriguez</span><abbr style="display:none;" class="select2-search-choice-close"></abbr>   <div><b></b></div></a><input type="text" class="select2-focusser select2-offscreen"><div style="display:none" class="select2-drop select2-with-searchbox">   <div class="select2-search">       <input type="text" class="select2-input" autocomplete="off" tabindex="0">   </div>   <ul class="select2-results">   </ul></div></div><select name="order[owner_id]" id="owner" class="form-control input-sm select2-offscreen" tabindex="-1">
+                                            <option data-badge="n/a" value="0">Unassigned</option>
+                                            <option data-pic="" data-badge="TA" value="83086">Tracy  Andersen</option>
+                                            <option data-pic="" data-badge="CB" value="83442">Christopher  Britton</option>
+                                            <option data-pic="" data-badge="MK" value="93908">Martin Kancheff</option>
+                                            <option data-pic="" data-badge="MR" selected="selected" value="83085">Mireya  Rodriguez</option>
+                                            <option data-pic="" data-badge="AS" value="93866">Aaron StPierre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-2">Status</label>
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-9">
+                                        <textarea style="resize: none; overflow: hidden; word-wrap: break-word; height: 47px;" rows="1" placeholder="Enter order status..." name="order[status]" id="order_status" cols="40" class="form-control input-sm autosize"></textarea>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Save" name="commit" disabled="disabled" class="btn btn-disabled btn-sm pull-right">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 visible-xs">
+                        <!-- / this partial is used twice on the page, if IDs are not randomized, then -->
+                        <!-- / bootstrap collapse breaks -->
+                        <div class="panel panel-default order-info-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Order Info</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <a data-remote="true" href="/orders/302946/client_info">DocSolution, Inc. (by Charles A. Brown &amp; Associates, P.L.L.C.)</a>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="order-details-box">
+                                            <dl class="dl-horizontal dl-order-info">
+                                                <dt>File #</dt>
+                                                <dd>0502415401</dd>
+                                                <dt>Product</dt>
+                                                <dd>Loan Modification </dd>
+                                                <dt>Lender</dt>
+                                                <dd>Flagstar Bank</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="order-details-box"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 visible-xs">
+                        <div class="panel panel-default panel-notary">
+                            <div class="panel-heading panel-heading-with-buttons clearfix">
+                                <h3 class="panel-title">
+                                    Notary
+                                </h3>
+                            </div>
+                            <div id="notary-info" class="panel-body">
+                                <div class="no-notary-msg">
+                                    No Notary Assigned
+                                    <br>
+                                    <a data-remote="true" href="/orders/302946/notaries">Search Agents</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 hidden-xs">
+                        <div class="signer-container">
+                            <table class="signer-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="signer-label">Location</td>
+                                        <td>
+                                            <a class="show_google_map" href="#">95-206 Ulahea Pl</a>
+                                            Mililani, HI 96789
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="signer-label">Signers</td>
+                                        <td>
+                                            <strong>Stanley Perpignan</strong>
+                                            <ul class="list-unstyled signer-detail-list">
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <div style="height:10px;" class="space"></div>
+                                            <strong>Monica Perpignan</strong>
+                                            <ul class="list-unstyled signer-detail-list">
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="hidden" value="21.4794273" name="order_lat" id="order_lat">
+                            <input type="hidden" value="-157.995065" name="order_lng" id="order_lng">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-footer-toolbar hidden-xs">
+                <a class="order-footer-toolbar__link" href="/orders/302946/new_duplicate">
+                    <i class="fa fa-copy"></i>
+                    Duplicate
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-9 order-main">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="map_canvas"></div>
+                </div>
+            </div>
+            <div class="notifications">
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="order_users_online"></div>
+                    <div id="order_local_notifications"></div>
+                </div>
+            </div>
+            <div id="search_notaries">
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert special-instructions-alert">
+                        <div class="special-instructions-header">
+                            Special Instructions
+                            <small>Shared with Notary</small>
+                        </div>
+                        <p>Notary has to stress that this is a RESIGN of the previously executed mod docs &ndash; NOT A NEW LOAN MODIFICATION.  Prior Modification was recorded incorrectly and will not be considered valid.   If the docs are not resigned, their modification will be reversed.</p>
+                        <p>This is a 3 attempt service, however, you will make your full fee of $75.00 whether the signing takes place on the 1st or 3rd attempt.  If more than one attempt is required, please wait a minimum of 4 hours between attempts.  All attempts do not need to be done on same day as long as the deadline is met.  Please take a picture of the house and address at every attempt so you receive proper credit.  If pictures are not received, your fee may be reduced.</p>
+                        <p>We do not have contact information for the signors, only address.</p>
+                        <p>All paperwork must be sent by Wednesday, January 20, 2016.</p>
+                        <p>If you have any questions, please send a message thru the SnapDocs portal to obtain the fastest response.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 adj-on-md">
+                    <div class="hidden-xs">
+                        <!-- / this partial is used twice on the page, if IDs are not randomized, then -->
+                        <!-- / bootstrap collapse breaks -->
+                        <div class="panel panel-default order-info-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Order Info</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <a data-remote="true" href="/orders/302946/client_info">DocSolution, Inc. (by Charles A. Brown &amp; Associates, P.L.L.C.)</a>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="order-details-box">
+                                            <dl class="dl-horizontal dl-order-info">
+                                                <dt>File #</dt>
+                                                <dd>0502415401</dd>
+                                                <dt>Product</dt>
+                                                <dd>Loan Modification </dd>
+                                                <dt>Lender</dt>
+                                                <dd>Flagstar Bank</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="order-details-box"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default panel-documents">
+                                <div class="panel-heading panel-heading-with-buttons">
+                                    <h3 class="panel-title">
+                                        Documents
+                                    </h3>
+                                    <div class="panel-btn-container text-muted header-help-text">
+
+                                    </div>
+                                </div>
+                                <form method="post" id="fileupload-order-attachments" enctype="multipart/form-data" class="new_attachment" action="/orders/302946/attachments" accept-charset="UTF-8">
+                                    <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="g8CoWHDJOCiJ7qNJ/6lUv5GtgGgwAdhVL0zXSW0yoQA=" name="authenticity_token"></div>
+                                    <div class="row no-documents-block hidden-softly">
+                                        <div class="col-md-12 center">
+                                            <h3 class="drag-and-drop-hint">
+                                                <i class="fa fa-file-o"></i>
+                                                Drop docs here
+                                            </h3>
+                                            <div class="btn fileinput-button btn-primary">
+                                                or choose a file
+                                                <input type="file" name="attachment[attachment]" id="attachment_attachment">
+                                            </div>
+                                            <div class="text-muted add-document-help-text">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-hover">
+                                        <tbody class="files">
+                                            <tr class="template-download fade in">
+
+                                                <td id="attachment-704268-cell" style="padding-left:15px; padding-right:4px;" class="col-md-11">
+                                                    <span class="name">
+                                                        <a download="STANLEY_PERPIGNAN_pc_docs.pdf" title="STANLEY_PERPIGNAN_pc_docs.pdf" id="attachment-704268-file-name" href="/orders/302946/attachments/704268">STANLEY_PERPIGNAN_pc_docs.pdf</a>
+                                                        <a data-remote="true" id="edit-filename-704268" class="edit-filename" href="/orders/302946/attachments/704268/edit">
+                                                            <icon class="glyphicon glyphicon-pencil"></icon>
+                                                        </a>
+
+                                                        <span class="text-muted page-count">31 pages</span>
+
+
+                                                        <br>
+                                                        <span class="label  admin-label ">
+                                                            added by Mireya  at Sign Here, LLC
+                                                        </span>
+
+                                                    </span>
+                                                </td>
+                                                <td class="col-md-1 center">
+                                                    <span class="size text-muted">398 KB</span>
+                                                </td>
+                                                <td class="center">
+                                                    <a data-url="/orders/302946/attachments/704268" data-type="DELETE" data-confirm-ui="Delete file?" class="delete-with-confirmation" href="#">
+                                                        <icon class="glyphicon glyphicon-remove"></icon>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="template-download fade in">
+
+                                                <td id="attachment-704267-cell" style="padding-left:15px; padding-right:4px;" class="col-md-11">
+                                                    <span class="name">
+                                                        <a download="STANLEY_PERPIGNAN_mod_docs.pdf" title="STANLEY_PERPIGNAN_mod_docs.pdf" id="attachment-704267-file-name" href="/orders/302946/attachments/704267">STANLEY_PERPIGNAN_mod_docs.pdf</a>
+                                                        <a data-remote="true" id="edit-filename-704267" class="edit-filename" href="/orders/302946/attachments/704267/edit">
+                                                            <icon class="glyphicon glyphicon-pencil"></icon>
+                                                        </a>
+
+                                                        <span class="text-muted page-count">33 pages</span>
+
+
+                                                        <br>
+                                                        <span class="label  admin-label ">
+                                                            added by Mireya  at Sign Here, LLC
+                                                        </span>
+
+                                                    </span>
+                                                </td>
+                                                <td class="col-md-1 center">
+                                                    <span class="size text-muted">358 KB</span>
+                                                </td>
+                                                <td class="center">
+                                                    <a data-url="/orders/302946/attachments/704267" data-type="DELETE" data-confirm-ui="Delete file?" class="delete-with-confirmation" href="#">
+                                                        <icon class="glyphicon glyphicon-remove"></icon>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="template-download fade in">
+
+                                                <td id="attachment-704266-cell" style="padding-left:15px; padding-right:4px;" class="col-md-11">
+                                                    <span class="name">
+                                                        <a download="STANLEY_PERPIGNAN_legal_desc.docx" title="STANLEY_PERPIGNAN_legal_desc.docx" id="attachment-704266-file-name" href="/orders/302946/attachments/704266">STANLEY_PERPIGNAN_legal_desc.docx</a>
+                                                        <a data-remote="true" id="edit-filename-704266" class="edit-filename" href="/orders/302946/attachments/704266/edit">
+                                                            <icon class="glyphicon glyphicon-pencil"></icon>
+                                                        </a>
+
+
+                                                        <br>
+                                                        <span class="label  admin-label ">
+                                                            added by Mireya  at Sign Here, LLC
+                                                        </span>
+
+                                                    </span>
+                                                </td>
+                                                <td class="col-md-1 center">
+                                                    <span class="size text-muted">312 KB</span>
+                                                </td>
+                                                <td class="center">
+                                                    <a data-url="/orders/302946/attachments/704266" data-type="DELETE" data-confirm-ui="Delete file?" class="delete-with-confirmation" href="#">
+                                                        <icon class="glyphicon glyphicon-remove"></icon>
+                                                    </a>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="action-btn-container  ">
+                                        <div class="pull-right" id="send_docs_to_signer">
+                                            <a data-remote="true" data-disable-with="Send to Consumer" class="btn btn-primary" href="/orders/302946/signer_documents/new">Send to Consumer</a>
+                                        </div>
+                                        <div class="btn fileinput-button btn-primary ">
+                                            Add a Document
+                                            <input type="file" name="attachment[attachment]" id="attachment_attachment">
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </form>
+                                <a id="attachments-update-callback" data-remote="true" class="hidden" href="/orders/302946/attachments/update_callback">validate page</a>
+                                <!-- The template to display files available for upload -->
+                                <script type="text/x-tmpl" id="template-upload">
+                                    {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                    &lt;tr class="template-upload fade"&gt;
+                                    &lt;td class="col-md-11" style="padding-left:15px;"&gt;
+                                    &lt;span class="name"&gt;{%=file.name%}&lt;/span&gt;
+                                    &lt;div class="progress"&gt;
+                                    &lt;div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="width: 0;"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;/td&gt;
+                                    &lt;td class="col-md-1"&gt;
+                                    &lt;span class="size text-muted"&gt;{%=o.formatFileSize(file.size, 0)%}&lt;/span&gt;
+                                    &lt;/td&gt;
+                                    &lt;td&gt;
+                                    {% if (!i &amp;&amp; !o.options.autoUpload) { %}
+                                    &lt;button class="btn btn-primary start" disabled&gt;
+                                    &lt;i class="glyphicon glyphicon-upload"&gt;&lt;/i&gt;
+                                    &lt;span&gt;Start&lt;/span&gt;
+                                    &lt;/button&gt;
+                                    {% } %}
+                                    {% if (!i) { %}
+                                    &lt;button class="btn btn-warning cancel"&gt;
+                                    &lt;i class="glyphicon glyphicon-ban-circle"&gt;&lt;/i&gt;
+                                    &lt;span&gt;Cancel&lt;/span&gt;
+                                    &lt;/button&gt;
+                                    {% } %}
+                                    &lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    {% } %}
+                                </script>
+                                <!-- The template to display files available for download -->
+                                <script type="text/x-tmpl" id="template-download">
+                                    {% for (var i=0, file; file=o.files[i]; i++) { %}
+                                    &lt;tr class="template-download fade"&gt;
+                                    {% if (file.error) { %}
+                                    &lt;td colspan="3"&gt;
+                                    &lt;span class="label label-danger"&gt;{%=locale.fileupload.error%}&lt;/span&gt;
+                                    &lt;span class="name"&gt;{%=file.name%}&lt;/span&gt;
+                                    &lt;br&gt;
+                                    &lt;span class="error"&gt;{%=locale.fileupload.errors[file.error] || file.error%}&lt;/span&gt;
+                                    &lt;/td&gt;
+                                    {% } else { %}
+                                    &lt;td class="col-md-11" style="padding-left:15px; padding-right:4px;" id='attachment-{%=file.id%}-cell'&gt;&lt;span class="name"&gt;
+                                    &lt;a href="{%=file.url%}" id='attachment-{%=file.id%}-file-name' title="{%=file.name%}" download="{%=file.name%}"&gt;{%=file.name%}&lt;/a&gt;
+                                    &lt;a href="{%=file.url%}/edit" class="edit-filename" id="edit-filename-{%=file.id%}" data-remote="true"&gt;
+                                    &lt;icon class="glyphicon glyphicon-pencil"&gt;&lt;/icon&gt;
+                                    &lt;/a&gt;
+                                    {% if (file.page_count) { %}
+                                    &lt;span class="text-muted page-count"&gt;{%=file.page_count%}&lt;/span&gt;
+                                    {% } %}
+                                    {% if (file.uploadedByName) { %}
+                                    &lt;br&gt;
+                                    &lt;span class="label {% if (file.uploadedByRole) { %} {%=file.uploadedByRole%}-label {% } else { %} unknown-label {% } %}"&gt;
+                                    {%=file.uploadedByName%}
+                                    &lt;/span&gt;
+                                    {% } %}
+                                    &lt;/span&gt;&lt;/td&gt;
+                                    &lt;td class="col-md-1 center"&gt;
+                                    &lt;span class="size text-muted"&gt;{%=o.formatFileSize(file.size, 0)%}&lt;/span&gt;
+                                    &lt;/td&gt;
+                                    &lt;td class="center"&gt;
+                                    &lt;a href="#" class="delete-with-confirmation" data-confirm-ui="Delete file?" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"&gt;
+                                    &lt;icon class="glyphicon glyphicon-remove"&gt;&lt;/icon&gt;
+                                    &lt;/a&gt;
+                                    &lt;/td&gt;
+                                    {% } %}
+                                    &lt;/tr&gt;
+                                    {% } %}
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="comments_order_302946" class="comments">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading panel-heading-with-buttons clearfix">
+                                        <h3 class="panel-title pull-left">Activity</h3>
+                                        <div class="panel-btn-container">
+                                            <label id="all-comments" class="comment-toggle active">
+                                                All
+                                            </label>
+                                            <label id="only-comments" class="comment-toggle">
+                                                Comments
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="comment_form">
+                                            <form method="post" id="comment__new_order_comment" data-remote="true" class="form-vertical" action="/orders/302946/comments" accept-charset="UTF-8">
+                                                <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="g8CoWHDJOCiJ7qNJ/6lUv5GtgGgwAdhVL0zXSW0yoQA=" name="authenticity_token"></div><div class="form-group">
+                                                    <textarea style="resize: none; overflow: hidden; word-wrap: break-word; height: 68px;" rows="2" placeholder="Enter a comment..." name="order_comment[text]" id="comment__order_comment_text" cols="40" class="form-control autosize"></textarea>
+                                                </div>
+                                                <div class="form-group no-margin-bottom">
+                                                    <div class="sharing-form">
+                                                        <span class="sharing-form__label">Share with:</span>
+                                                        <label for="comment__order_comment_shared_with_client" class="checkbox-inline">
+                                                            <input type="hidden" value="0" name="order_comment[shared_with_client]"><input type="checkbox" value="1" name="order_comment[shared_with_client]" id="comment__order_comment_shared_with_client" class="enable_send_email_notification_checkbox">
+                                                            Client
+                                                        </label><label for="comment__order_comment_shared_with_agent" class="checkbox-inline">
+                                                            <input type="hidden" value="0" name="order_comment[shared_with_agent]"><input type="checkbox" value="1" name="order_comment[shared_with_agent]" id="comment__order_comment_shared_with_agent" class="enable_send_email_notification_checkbox">
+                                                            Notary
+                                                        </label><div class="hidden-softly send_email_notification">
+                                                            <label for="comment__order_comment_send_email_notification" class="checkbox-inline">
+                                                                <input type="hidden" value="0" name="order_comment[send_email_notification]"><input type="checkbox" value="1" name="order_comment[send_email_notification]" id="comment__order_comment_send_email_notification" class="send_email_notification_checkbox" checked="checked">
+                                                                Send email
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pull-right">
+                                                        <input type="submit" value="Create Comment" name="commit" data-disable-with="Please wait..." class="btn btn-primary">
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                    <table class="comments-list comments-list--updatable table order-comments-list">
+                                        <tbody>
+                                            <tr id="order_comment_8669572" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Order canceled</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 20, 2016 at  5:22am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8636861" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">
+                                                                Shipping method added.
+                                                                <br>Tracking number added
+                                                            </p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Tracy  Andersen </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 19, 2016 at  6:17am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8636732" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">
+                                                                Appointment date changed from January 19, 2016 to January 20, 2016.
+                                                                <br>Appointment time changed from t_b_d to 1:00 pm
+                                                            </p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Tracy  Andersen </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 19, 2016 at  6:12am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8634850" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Appointment date changed from January 20, 2016 to January 19, 2016</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Tracy  Andersen </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 19, 2016 at  5:17am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8580992" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">
+                                                                Notary fees updated:
+                                                                <br>Fee changed from $15.00 to $110
+                                                            </p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Tracy  Andersen </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 16, 2016 at  3:19pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8580991" class="order_comment comment">
+                                                <td class="comment__content">
+                                                    <ul class="comment__actions">
+                                                        <li><a data-remote="true" href="/orders/302946/comments/8580991/edit"><icon icon="" <="" class="glyphicon glyphicon-pencil"></icon></a></li>
+                                                        <li><a rel="nofollow" data-remote="true" data-method="delete" data-confirm="Delete comment?" href="/orders/302946/comments/8580991"><icon icon="" <="" class="glyphicon glyphicon-remove"></icon></a></li>
+                                                    </ul>
+                                                    <div class="comment__photo">
+                                                        <div class="avatar avatar--md"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                                    </div>
+                                                    <div class="comment__body">
+                                                        <div class="comment__body__container">
+                                                            <div class="comment__body__metadata">
+                                                                <span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Tracy  Andersen </span>
+                                                                <div class="comment__body__timestamp comment__body__timestamp--message">
+                                                                    Jan 16, 2016 at  3:19pm
+                                                                </div>
+                                                            </div>
+                                                            <p class="comment-text">NOTARY IS NOT ON SD SO WE WILL BE EMAILING BACK AND FORTH...SIGN@DOTTEDLINE808.COM  l</p>
+                                                            <p class="comment-text">LISA IS THE CONTACT BUT NOT THE NOTARY 808-859-2041</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8580988" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">ta</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Automator canceled</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Tracy  Andersen </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 16, 2016 at  3:17pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8576080" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Automator started</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 16, 2016 at  5:51am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8576079" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Automator canceled</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 16, 2016 at  5:51am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8576078" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">
+                                                                Notary fees updated:
+                                                                <br>Added +$15.00
+                                                            </p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 16, 2016 at  5:51am
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8566878" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Automator started</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 15, 2016 at  2:03pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8566873" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Documents uploaded - STANLEY_PERPIGNAN_pc_docs.pdf</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 15, 2016 at  2:02pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8566872" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Documents uploaded - STANLEY_PERPIGNAN_mod_docs.pdf</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 15, 2016 at  2:02pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8566871" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Documents uploaded - STANLEY_PERPIGNAN_legal_desc.docx</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 15, 2016 at  2:02pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="order_comment_8566839" class="order_comment comment auto-added">
+                                                <td class="comment__content">
+                                                    <div class="comment__body--event">
+                                                        <div class="avatar avatar--small"><div class="avatar__img avatar__img--placeholder">mr</div></div>
+                                                        <div class="comment__body__content">
+                                                            <p class="comment-text">Signing order created</p>
+                                                            <span class="text-muted">by</span>
+                                                            <span class="comment__author"><span data-toggle="tooltip" data-title="Signing Coordinator at Sign Here, LLC" data-placement="top" class="comment__author" data-original-title="" title="">Mireya  Rodriguez </span></span>
+                                                            <div class="comment__body__timestamp comment__body__timestamp--event">
+                                                                Jan 15, 2016 at  2:02pm
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 adj-on-md">
+                    <div class="row hidden-xs">
+                        <div id="order-notary-container" class="col-sm-12">
+                            <div class="panel panel-default panel-notary">
+                                <div class="panel-heading panel-heading-with-buttons clearfix">
+                                    <h3 class="panel-title">
+                                        Notary
+                                    </h3>
+                                </div>
+                                <div id="notary-info" class="panel-body">
+                                    <div class="no-notary-msg">
+                                        No Notary Assigned
+                                        <br>
+                                        <a data-remote="true" href="/orders/302946/notaries">Search Agents</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="client_fees_order_302946">
+                                <div class="panel panel-default fees-widget">
+                                    <div class="panel-heading panel-heading-with-buttons clearfix">
+                                        <h3 class="panel-title pull-left">
+                                            Client Fees
+                                        </h3>
+                                        <div class="panel-btn-container">
+                                            <a data-remote="true" href="/orders/302946/client_fees/edit">Edit</a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="fees-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Loan Modification </td>
+                                                    <td class="fee-amount">$150</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="notary_fees_order_302946">
+                                <div class="panel panel-default fees-widget">
+                                    <div class="panel-heading panel-heading-with-buttons clearfix">
+                                        <h3 class="panel-title pull-left">
+                                            Notary Fees
+                                        </h3>
+                                        <div class="panel-btn-container">
+                                            <a data-remote="true" href="/orders/302946/notary_fees/edit">Edit</a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="fees-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Loan Modification </td>
+                                                    <td class="fee-amount">$75</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td class="fee-amount">$110</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <hr>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total</td>
+                                                    <td class="fee-amount">$185</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="shipping-info" class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Shipping Info</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form method="post" id="edit_order_302946" data-remote="true" class="shipping-info" action="/orders/302946" accept-charset="UTF-8">
+                                        <div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8"><input type="hidden" value="put" name="_method"><input type="hidden" value="g8CoWHDJOCiJ7qNJ/6lUv5GtgGgwAdhVL0zXSW0yoQA=" name="authenticity_token"></div><div class="form-group">
+                                            <label for="order_shipping_method">Service</label>
+                                            <select name="order[shipping_method]" id="order_shipping_method" class="form-control input-sm">
+                                                <option value="">Select Shipping Co</option>
+                                                <option selected="selected" value="FedEx">FedEx</option>
+                                                <option value="UPS">UPS</option>
+                                                <option value="other">other</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="order_tracking_number">Tracking #</label>
+                                            <input type="text" value="495689284993" size="30" name="order[tracking_number]" id="order_tracking_number" class="form-control input-sm">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label for="order_completion_time_out_enabled" class="checkbox">
+                                                <input type="hidden" value="0" name="order[completion_time_out_enabled]"><input type="checkbox" value="1" name="order[completion_time_out_enabled]" id="order_completion_time_out_enabled">
+                                                Auto email for status 1 hour after appointment
+                                            </label>
+                                        </div>
+                                        <input type="submit" value="Save" name="commit" disabled="disabled" class="btn btn-sm btn-disabled pull-right">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row visible-xs">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Signer</h3>
+                                </div>
+                                <div class="panel-default">
+                                    <div class="signer-container">
+                                        <table class="signer-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="signer-label">Location</td>
+                                                    <td>
+                                                        <a class="show_google_map" href="#">95-206 Ulahea Pl</a>
+                                                        Mililani, HI 96789
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="signer-label">Signers</td>
+                                                    <td>
+                                                        <strong>Stanley Perpignan</strong>
+                                                        <ul class="list-unstyled signer-detail-list">
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                        <div style="height:10px;" class="space"></div>
+                                                        <strong>Monica Perpignan</strong>
+                                                        <ul class="list-unstyled signer-detail-list">
+                                                            <li></li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <input type="hidden" value="21.4794273" name="order_lat" id="order_lat">
+                                        <input type="hidden" value="-157.995065" name="order_lng" id="order_lng">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div role="dialog" id="notary-unremovable" class="modal noresize settings-modal">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header navbar-logo-container">
+                        <button type="button" data-dismiss="modal" class="close">×</button>
+                        <h4 class="modal-title">Docs Already Downloaded</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            This notary cannot be removed because they've already downloaded the documents.
+                            This is done to reduce confusion around canceled orders.
+                        </p>
+                        <p>
+                            If you need to assign a different notary, please either cancel this order or mark it as 'Did Not Sign', then
+                            <a href="/orders/302946/new_duplicate">duplicate it</a>
+                            to restart with the same order information.
+                        </p>
+                        <p class="text-muted">You are not charged for canceled orders.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

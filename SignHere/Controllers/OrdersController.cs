@@ -13,5 +13,17 @@ namespace SignHere.Controllers
         {
             return View();
         }
+
+        public ActionResult OrderDetail()
+        {
+
+
+            return View();
+
+        }
+
+
+
+
     }
 }
